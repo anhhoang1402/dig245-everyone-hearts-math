@@ -19,53 +19,51 @@
 
     <!-- visible content goes here -->
     <h1>Free Time Calculator (College Edition)</h1>
-    <img src = "https://nsjonline.com/wp-content/uploads/2017/08/15068_davidson_college_campus_02o.jpg" alt = "Students at Davidson College studying" width = "200" height = "200"/>
+    <img src="https://nsjonline.com/wp-content/uploads/2017/08/15068_davidson_college_campus_02o.jpg" alt="Students at Davidson College studying" width="200" height="200" />
 
-    <br> </br>
+    <br>
     <div class="container">
 
-      <form action = "#">
+      <form action="#">
         <label for="education"> How much time you spend studying per day? </label>
-        <input type="number" name="study" id="education" min = "1" max = "24">
+        <input type="number" name="study" id="education" min="1" max="24">
 
         <br>
 
         <label for="essential"> How much time you spend on personal activities (personal hygiene, sleeping, and eating) per day? </label>
-        <input type="number" name="sleep" id="essential" min = "1" max = "24"> <br>
+        <input type="number" name="sleep" id="essential" min="1" max="24"> <br>
 
 
         <label for="extra"> How much time you spend on extracurriculars (clubs, sports, community service,...) per day? </label>
-        <input type="number" name="extracurriculars" id="extra" min = "1" max = "24"> <br>
+        <input type="number" name="extracurriculars" id="extra" min="1" max="24"> <br>
 
-        <label for = "freetime"> What would you like to do in your free time?</label>
+        <label for="freetime"> What would you like to do in your free time?</label>
 
-        <select name = "activities" id = "activities">
-          <option value = "Hang out with friends"> Hanging out with friends</option>
-          <option value = "Exercise"> Exercise </option>
-          <option value = "Travel"> Travelling </option>
+        <select name="activities" id="activities">
+          <option value="Hang out with friends"> Hanging out with friends</option>
+          <option value="Exercise"> Exercise </option>
+          <option value="Travel"> Travelling </option>
         </select>
 
         <br>
 
-        <input type="submit"> 
+        <input type="submit">
 
-        <div id = result> </div>
-
+        <div id=result> </div>
 
 
       </form>
 
     </div>
+
     <script>
-      document.querySelector("form").addEventListener("submit", function(event){
+      document.querySelector("form").addEventListener("submit", function(event) {
         var hours = 24 - (Number(document.getElementById("education").value) + Number(document.getElementById("essential").value) + Number(document.getElementById("extra").value));
         var activity = document.getElementById("activities").value;
 
         document.getElementById("result").innerHTML = "You have " + hours + " hours to " + activity.toLowerCase() + "!";
         event.preventDefault();
       }, false);
-
-
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
