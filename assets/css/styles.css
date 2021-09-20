@@ -2,10 +2,33 @@
 /* css */
 
 html, body {
-  background-color: #ffcc99;
+  background-color: #ffded1;
+  text-align: center;
+  ;
 
+
+}
+label {
+  margin-top: 10px;
+  color:  #00006f;
 }
 
 input {
   border-radius: 4px;
+}
+
+h1 {
+  text-align: center;
+  color: #00006f;
+}
+
+input[type=number],
+input[type = submit],
+select{
+  margin-top:10px;
+  padding:10px;
+  border-radius:10px;
+}
+
+
 }
